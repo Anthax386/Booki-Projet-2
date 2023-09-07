@@ -29,7 +29,6 @@ body {
 
 header {
     display: flex;
-    padding-right: 0px;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
@@ -146,7 +145,7 @@ main {
     background: var(--white, #FFF);
 }
 .serch-bar i {
-    padding: 17px 0;
+    padding: 0 17px;
 }
 .serch-bar input {
     border: 0;
