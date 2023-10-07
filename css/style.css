@@ -27,7 +27,7 @@ body {
     padding: 0 50px;
 }
 
-/********* HEADER LOGO *********/
+/********* HEADER *********/
 header {
     display: flex;
     justify-content: space-between;
@@ -51,7 +51,7 @@ header {
 }
 
 .black {
-    color: inherit;
+    color: #000000;
 }
 
 .menu a {
@@ -94,10 +94,8 @@ main {
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     text-decoration: none;
-
 
     color: inherit;
 }
@@ -127,7 +125,7 @@ main {
     align-self: stretch;
 }
 
-.serch-title h1{
+.bigP{
     font-size: 22px;
     padding: 0;
     margin: 0;
@@ -169,26 +167,37 @@ main {
     font-size: 18px;
 }
 .serch-bar .serch-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid var(--blue, #0065FC);
     background: var(--blue, #0065FC);
-
     color: var(--white, #FFF);
     text-align: center;
+    height: 100%;
+}
+.serch-bar .serch-btn button {
     font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    
+    color: var(--white, #FFF);
+    background: none;
+    border: none;
     height: 100%;
-
-    content: 'Rechercher';
+    width: 100%;
+}
+.serch-bar .serch-btn i {
+    display: none;
 }
 
 .filtres {
     display: flex;
     flex-direction: row;
-
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
 }
@@ -284,6 +293,12 @@ main {
     background: #FFF;
 
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
+}
+.hebergements-card .card a {
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 
 .hebergements-card img {
@@ -422,6 +437,14 @@ footer section {
     align-self: stretch;
 }
 
+footer section ul {
+    padding: 0;
+}
+footer section ul li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -453,7 +476,7 @@ footer section {
     }
 
     .populaires-cards .card {
-        width: 30%;
+        width: 100%;
     }
 
     .populaires-cards .card-title {
@@ -480,6 +503,12 @@ footer section {
         flex-direction: column;   
         align-items: flex-start;
         font-size: 14px;
+   }
+   .activites-card .card a {
+        color: inherit;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
    }
    .activites-card img {
         width: 100%;
@@ -534,18 +563,25 @@ footer section {
     .serch-bar input{
         font-size: 14px;
     }
+
     .serch-bar .serch-btn {
-        initial-value: 'Rechercher';
+        width: 50px;
+        position: relative;;
     }
+    .serch-bar .serch-btn button {
+        display: none;
+    }
+    .serch-bar .serch-btn i {
+        display: block;
+        color: #fff;
+    }
+
     .button-filter {
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
         margin: auto;
         width: 100%;
-    }
-    .button-filter div {
-        gap: 10px;
     }
     .filtres {
         flex-direction: column;
@@ -555,7 +591,7 @@ footer section {
     
     .button-filter button {
         font-size: 14px;
-        width: 49%;
+        width: 47%;
     }
 
     .info-bar p{
@@ -599,7 +635,7 @@ footer section {
         padding: 0;
     }
     .hebergements img{
-        width: auto;
+        width: 100%;
     }
 
     .activites-div {
